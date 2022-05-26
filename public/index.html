@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Private Shop</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/build.css">
+</head>
+
+<body class="font-mont  text-slate-100">
+<div class="">
+    <header class="bg-slate-800">
+        <section class="lg:flex flex-col my-cont lg:h-screen">
+            <!--HEADER-->
+            <div class="py-8 flex items-center justify-between w-full gap-8 flex-col lg:flex-row">
+                <h1 class="flex items-center gap-3">
+                    <span class="inline-block min-w-8 w-8">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 24 24" fill="currentColor">
+                          <path
+                                  d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm0 18v-1.511h-.5v1.511h-1v-1.511h-2.484l.25-1.489h.539c.442 0 .695-.425.695-.854v-4.444c0-.416-.242-.702-.683-.702h-.817v-1.5h2.5v-1.5h1v1.5h.5v-1.5h1v1.526c2.158.073 3.012.891 3.257 1.812.29 1.09-.429 2.005-1.046 2.228.75.192 1.789.746 1.789 2.026 0 1.742-1.344 2.908-4 2.908v1.5h-1zm-.5-5.503v2.503c1.984 0 3.344-.188 3.344-1.258 0-1.148-1.469-1.245-3.344-1.245zm0-.997c1.105 0 2.789-.078 2.789-1.25 0-1-1.039-1.25-2.789-1.25v2.5z"/>
+                      </svg>
+                  </span>
+                    <span class="text-[20px] font-medium">
+                      Private Shop
+                  </span>
+                </h1>
+                <ul class="flex gap-4 sm:gap-0 items-center text-white/70 sm:divide-x-[1px] divide-slate-500 flex-col sm:flex-row">
+                    <li class="nav-item sm:px-16 relative">
+                        <a href="#wallet">Wallet List</a>
+                    </li>
+                    <li class="nav-item sm:pl-16">
+                        <a href="#faq">FAQ</a>
+                    </li>
+
+                </ul>
+            </div>
+            <!--HERO-->
+            <div class="py-10 lg:py-20 lg:flex lg:gap-20 items-center justify-between capitalize">
+                <div class="flex flex-col items-center lg:items-start">
+                    <p class="font-joseph text-[35px] text-center leading-relaxed lg:text-left lg:max-w-[600px]">
+                        <span class="text-yellow-300">BTC </span>Private keys compromised and gathered from all
+                        over the world.
+                    </p>
+                    <div class="text-center flex gap-8 py-4 lg:text-left">
+                        <div>
+                            <h1 class="text-[35px]"><span class="text-yellow-300">1.2</span>+ BTC</h1>
+                            <span class="text-slate-400">Value of wallets</span>
+                        </div>
+                        <div>
+                            <h1 class="text-[35px]"><span class="text-yellow-300">12</span></h1>
+                            <span class="text-slate-400">Number of wallets</span>
+                        </div>
+                    </div>
+                    <a href="#wallet" class="my-8">
+                        <button class="primary-button ">Show me The List</button>
+                    </a>
+                </div>
+                <div>
+                    <img class="h-full w-[600px] object-center hidden lg:inline object-cover"
+                         src="./images/finallogo.png"
+                         alt="">
+                </div>
+            </div>
+        </section>
+    </header>
+    <main>
+        <div id="wallet" class="bg-slate-900">
+            <section class="my-cont py-12">
+                <h1 class="header">
+                    Compromised Wallets</h1>
+                <!--TABLE-->
+                <div class="overflow-x-auto">
+                    <div class="bg-slate-800 rounded-md px-8 py-2">
+                        <table class="w-full font-medium border-collapse" id="wallets">
+                            <thead class="">
+                                <tr class="tracking-wider text-slate-400">
+                                    <td class=""></td>
+                                    <td class="">Status</td>
+                                    <td class="">Address</td>
+                                    <td class="">Private Key</td>
+                                    <td class="">Balance (BTC)</td>
+                                    <td class="">Price (BTC)</td>
+                                    <td class="">Blockchain</td>
+                                </tr>
+                            </thead>
+                            <tbody class="">
+                                <tr class="border-t mx-4 border-slate-600">
+                                    <td>
+                                        <a href="/check?payload=19sEakhaPwguvvf3SabPTpyqgMvbo7Yu3q_0.005_1" class="primary-button">Buy</a>
+                                    </td>
+                                    <td class="text-yellow-300">Available</td>
+                                    <td>19sEakhaPwguvvf3SabPTpyqgMvbo7Yu3q</td>
+                                    <td>bbad344d23e6479**34MoreChars**e5a1069c61e5224</td>
+                                    <td>0.010 </td>
+                                    <td>0.005 </td>
+                                    <td>
+                                        <a target="_blank" href="https://www.blockchain.com/btc/address/19sEakhaPwguvvf3SabPTpyqgMvbo7Yu3q" class="transition flex items-center text-blue-400  gap-2 hover:text-slate-100">
+                                            <span>Check It</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none"
+                                                 viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                      d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                                            </svg>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr class="border-t mx-4 border-slate-600">
+                                    <td>
+                                        <a href="/check?payload=1HJv9jJAyRQmCzGnWDmdzJYR171q76xBqj_0.0125_2" class="primary-button">Buy</a>
+                                    </td>
+                                    <td class="text-yellow-300">Available</td>
+                                    <td>1HJv9jJAyRQmCzGnWDmdzJYR171q76xBqj</td>
+                                    <td>203df2c4a696305**34MoreChars**b66861321a360bc</td>
+                                    <td>0.025 </td>
+                                    <td>0.0125 </td>
+                                    <td>
+                                        <a target="_blank" href="https://www.blockchain.com/btc/address/1HJv9jJAyRQmCzGnWDmdzJYR171q76xBqj" class="transition flex items-center text-blue-400  gap-2 hover:text-slate-100">
+                                            <span>Check It</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none"
+                                                 viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                      d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                                            </svg>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr class="border-t mx-4 border-slate-600">
+                                    <td>
+                                        <a href="/check?payload=1MjGsbHbA22AkqrbEfUzMP18JTgPRyqjNo_0.0135_3" class="primary-button">Buy</a>
+                                    </td>
+                                    <td class="text-yellow-300">Available</td>
+                                    <td>1MjGsbHbA22AkqrbEfUzMP18JTgPRyqjNo</td>
+                                    <td>b7568008384e43f**34MoreChars**47803af253240d6</td>
+                                    <td>0.027 </td>
+                                    <td>0.0135 </td>
+                                    <td>
+                                        <a target="_blank" href="https://www.blockchain.com/btc/address/1MjGsbHbA22AkqrbEfUzMP18JTgPRyqjNo" class="transition flex items-center text-blue-400  gap-2 hover:text-slate-100">
+                                            <span>Check It</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none"
+                                                 viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                      d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                                            </svg>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr class="border-t mx-4 border-slate-600">
+                                    <td>
+                                        <a href="/check?payload=175TnLGayJfdxsKuXVDQNdtdVYQ7CU6FVH_0.0195_4" class="primary-button">Buy</a>
+                                    </td>
+                                    <td class="text-yellow-300">Available</td>
+                                    <td>175TnLGayJfdxsKuXVDQNdtdVYQ7CU6FVH</td>
+                                    <td>ba028c4eef32620**34MoreChars**a4ddc12e47dacd7</td>
+                                    <td>0.039 </td>
+                                    <td>0.0195 </td>
+                                    <td>
+                                        <a target="_blank" href="https://www.blockchain.com/btc/address/175TnLGayJfdxsKuXVDQNdtdVYQ7CU6FVH" class="transition flex items-center text-blue-400  gap-2 hover:text-slate-100">
+                                            <span>Check It</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none"
+                                                 viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                      d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                                            </svg>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr class="border-t mx-4 border-slate-600">
+                                    <td>
+                                        <a href="/check?payload=12RtyyY9gA2Ts3u8nv69AsTrELskMPct9V_0.022_5" class="primary-button">Buy</a>
+                                    </td>
+                                    <td class="text-yellow-300">Available</td>
+                                    <td>12RtyyY9gA2Ts3u8nv69AsTrELskMPct9V</td>
+                                    <td>77d82175498947b**34MoreChars**23108ac866d90b7</td>
+                                    <td>0.044 </td>
+                                    <td>0.022 </td>
+                                    <td>
+                                        <a target="_blank" href="https://www.blockchain.com/btc/address/12RtyyY9gA2Ts3u8nv69AsTrELskMPct9V" class="transition flex items-center text-blue-400  gap-2 hover:text-slate-100">
+                                            <span>Check It</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none"
+                                                 viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                      d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                                            </svg>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr class="border-t mx-4 border-slate-600">
+                                    <td>
+                                        <a href="/check?payload=19G7hoQ43f72VVA643kYc88rbNREuFqZPo_0.030_6" class="primary-button">Buy</a>
+                                    </td>
+                                    <td class="text-yellow-300">Available</td>
+                                    <td>19G7hoQ43f72VVA643kYc88rbNREuFqZPo</td>
+                                    <td>9d0fe0fe54eb2c6**34MoreChars**1f9d467cfc8e5d1</td>
+                                    <td>0.060 </td>
+                                    <td>0.030 </td>
+                                    <td>
+                                        <a target="_blank" href="https://www.blockchain.com/btc/address/19G7hoQ43f72VVA643kYc88rbNREuFqZPo" class="transition flex items-center text-blue-400  gap-2 hover:text-slate-100">
+                                            <span>Check It</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none"
+                                                 viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                      d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                                            </svg>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr class="border-t mx-4 border-slate-600">
+                                    <td>
+                                        <a href="/check?payload=1AHexVmDdTCc3TKEAAzm2MhEqkHFg9qzSk_0.037_7" class="primary-button">Buy</a>
+                                    </td>
+                                    <td class="text-yellow-300">Available</td>
+                                    <td>1AHexVmDdTCc3TKEAAzm2MhEqkHFg9qzSk</td>
+                                    <td>fe5932239bc4332**34MoreChars**00ce91c056ccbf9</td>
+                                    <td>0.074 </td>
+                                    <td>0.037 </td>
+                                    <td>
+                                        <a target="_blank" href="https://www.blockchain.com/btc/address/1AHexVmDdTCc3TKEAAzm2MhEqkHFg9qzSk" class="transition flex items-center text-blue-400  gap-2 hover:text-slate-100">
+                                            <span>Check It</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none"
+                                                 viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                      d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                                            </svg>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr class="border-t mx-4 border-slate-600">
+                                    <td>
+                                        <a href="/check?payload=14bAb9kemv96QjxaT74J5Wx1aeyegmarhs_0.0495_8" class="primary-button">Buy</a>
+                                    </td>
+                                    <td class="text-yellow-300">Available</td>
+                                    <td>14bAb9kemv96QjxaT74J5Wx1aeyegmarhs</td>
+                                    <td>485f10ce527e409**34MoreChars**30e9274d35536c7</td>
+                                    <td>0.099 </td>
+                                    <td>0.0495 </td>
+                                    <td>
+                                        <a target="_blank" href="https://www.blockchain.com/btc/address/14bAb9kemv96QjxaT74J5Wx1aeyegmarhs" class="transition flex items-center text-blue-400  gap-2 hover:text-slate-100">
+                                            <span>Check It</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none"
+                                                 viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                      d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                                            </svg>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr class="border-t mx-4 border-slate-600">
+                                    <td>
+                                        <a href="/check?payload=3Jwjozys6dQzgMT2uaZpXLsbeLeGN3uE5Q_0.0505_9" class="primary-button">Buy</a>
+                                    </td>
+                                    <td class="text-yellow-300">Available</td>
+                                    <td>3Jwjozys6dQzgMT2uaZpXLsbeLeGN3uE5Q</td>
+                                    <td>b8fb300ddd882ed**34MoreChars**4dd5586ee81f09c</td>
+                                    <td>0.101 </td>
+                                    <td>0.0505 </td>
+                                    <td>
+                                        <a target="_blank" href="https://www.blockchain.com/btc/address/3Jwjozys6dQzgMT2uaZpXLsbeLeGN3uE5Q" class="transition flex items-center text-blue-400  gap-2 hover:text-slate-100">
+                                            <span>Check It</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none"
+                                                 viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                      d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                                            </svg>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr class="border-t mx-4 border-slate-600">
+                                    <td>
+                                        <a href="/check?payload=1CzLGK9DWzeqNnMCpmBckWLXgnAm6oijTn_0.0795_10" class="primary-button">Buy</a>
+                                    </td>
+                                    <td class="text-yellow-300">Available</td>
+                                    <td>1CzLGK9DWzeqNnMCpmBckWLXgnAm6oijTn</td>
+                                    <td>78f79ca87cb08c3**34MoreChars**92bc41ad48ebe6d</td>
+                                    <td>0.159 </td>
+                                    <td>0.0795 </td>
+                                    <td>
+                                        <a target="_blank" href="https://www.blockchain.com/btc/address/1CzLGK9DWzeqNnMCpmBckWLXgnAm6oijTn" class="transition flex items-center text-blue-400  gap-2 hover:text-slate-100">
+                                            <span>Check It</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none"
+                                                 viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                      d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                                            </svg>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr class="border-t mx-4 border-slate-600">
+                                    <td>
+                                        <a href="/check?payload=33idk5rrA3HJRpJaqqN58p6K4uXsBBEAHe_0.125_11" class="primary-button">Buy</a>
+                                    </td>
+                                    <td class="text-yellow-300">Available</td>
+                                    <td>33idk5rrA3HJRpJaqqN58p6K4uXsBBEAHe</td>
+                                    <td>29891dd71939a65**34MoreChars**80ce6db4b098cec</td>
+                                    <td>0.250 </td>
+                                    <td>0.125 </td>
+                                    <td>
+                                        <a target="_blank" href="https://www.blockchain.com/btc/address/33idk5rrA3HJRpJaqqN58p6K4uXsBBEAHe" class="transition flex items-center text-blue-400  gap-2 hover:text-slate-100">
+                                            <span>Check It</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none"
+                                                 viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                      d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                                            </svg>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr class="border-t mx-4 border-slate-600">
+                                    <td>
+                                        <a href="/check?payload=1BFBsr7oLSrsv1CtjiBsNJAQXGzPUUKyUC_0.1605_12" class="primary-button">Buy</a>
+                                    </td>
+                                    <td class="text-yellow-300">Available</td>
+                                    <td>1BFBsr7oLSrsv1CtjiBsNJAQXGzPUUKyUC</td>
+                                    <td>f71ce00df785950**34MoreChars**6d2648c708970ac</td>
+                                    <td>0.321 </td>
+                                    <td>0.1605 </td>
+                                    <td>
+                                        <a target="_blank" href="https://www.blockchain.com/btc/address/1BFBsr7oLSrsv1CtjiBsNJAQXGzPUUKyUC" class="transition flex items-center text-blue-400  gap-2 hover:text-slate-100">
+                                            <span>Check It</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none"
+                                                 viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                      d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                                            </svg>
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+        <!--FAQ-->
+        <div id="faq" class="bg-slate-800">
+            <section class="my-cont py-12">
+                <h1 class="header">
+                    FAQ
+                </h1>
+                <div class="space-y-6">
+                    <div>
+                        <h2 class="text-lg font-semibold text-yellow-300">What is a bitcoin private key?</h2>
+                        <p class="leading-loose text-slate-300">Your bitcoin private key is a randomly generated string (numbers and letters), allowing bitcoins to be spent. A private key is always mathematically related to the bitcoin wallet address, but is impossible to reverse engineer thanks to a strong encryption code base.</p>
+                    </div>
+                    <div>
+                        <h2 class="text-lg font-semibold text-yellow-300">How to use the private key?</h2>
+                        <p class="leading-loose text-slate-300">You can import a private key to an existing wallet and then you have full access to the wallet. <br> we recommend you use electrum for importing private keys.</p>
+                    </div>
+                    <div>
+                        <h2 class="text-lg font-semibold text-yellow-300">Can you trust us?</h2>
+                        <p class="leading-loose text-slate-300">You can check the balance of the private keys in the blockchain, there is a link for every wallet in the table. Also, we have a screenshot of every wallet in the electrum attached to the checkout page, so yeah you can!
+                        </p>
+                    </div>
+                    <div>
+                        <h2 class="text-lg font-semibold text-yellow-300">Why you're selling the private keys?</h2>
+                        <p class="leading-loose text-slate-300">BTC could get tracked down, we have scavenged and gathered too many keys and we can't just use all of them, so we decided to create our hidden service to sell some of our private keys. don't forget that for every address, you are paying 50% of the price of that address so we aren't selling our keys cheaply.
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <!--FOOTER-->
+    <footer class="bg-slate-800">
+        <section class="my-cont ">
+            <div class="border-t-[1px] py-6 flex justify-between tracking-wider">
+                <div class="">
+                    2022
+                    <span class="text-yellow-300 font-medium">Private Shop</span>
+                    <span>All rights reserved</span>
+                </div>
+            </div>
+        </section>
+    </footer>
+</div>
+</body>
+
+</html>

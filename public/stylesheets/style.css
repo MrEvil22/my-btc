@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'galano';
+    src: url("../fonts/galano.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'joseph';
+    src: url("../fonts/joseph.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'mont';
+    src: url("../fonts/Montserrat-Light.woff") format("woff");
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: 'mont';
+    src: url("../fonts/Montserrat-Regular.woff") format("woff");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'mont';
+    src: url("../fonts/Montserrat-Medium.woff") format("woff");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'mont';
+    src: url("../fonts/Montserrat-Bold.woff") format("woff");
+    font-weight: 600;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+@layer components{
+    .nav-item{
+        @apply hover:text-yellow-300 transition-all after:transition-all cursor-pointer
+        after:content-[''] after:block after:bg-yellow-300 after:h-[1px] after:scale-x-0 hover:after:scale-x-100
+    }
+    .primary-button{
+        @apply bg-yellow-300 rounded-full px-8 py-3 text-slate-700 font-medium transition hover:bg-white uppercase font-semibold tracking-wide inline-block
+    }
+    .my-cont{
+        @apply max-w-[1720px] mx-auto  px-12
+    }
+    .header{
+        @apply font-medium text-2xl tracking-wider border-yellow-300 pb-2 border-b-2 inline-block mb-6
+    }
+}
+
+#wallets td,#wallets th{
+    padding: 16px;
+    text-align: left;
+}

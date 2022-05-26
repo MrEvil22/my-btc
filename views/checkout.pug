@@ -1,0 +1,106 @@
+doctype html
+html
+    head
+        title Check Out
+        link(rel='stylesheet' href='/stylesheets/build.css')
+        script(type='text/javascript').
+            window.onload = function () {
+                // form
+                const email = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/i
+                const message = document.getElementById("message")
+                const myMail = document.getElementById("emailInput");
+                const myButton = document.getElementById("submit")
+                const container = document.getElementById("mailContainer")
+                function submitting() {
+                    const mail = myMail.value
+                    message.className = "mt-2"
+                    if (email.test(mail)) {
+                        message.classList.add("text-green-500")
+                        message.textContent = "Your email submitted successfully!"
+                        container.classList.add("hidden")
+                    } else {
+                        message.classList.add("text-red-500")
+                        message.textContent = "Please enter a valid email address"
+                    }
+                }
+                myButton.addEventListener("click",submitting)
+                myMail.addEventListener("keydown",function (e) {
+                    if(e.code.toLowerCase().includes("enter")){
+                        e.preventDefault()
+                        submitting()
+                    }
+                })
+                // timer
+                const timerNode = document.getElementById("timer")
+                const timerContainer = document.getElementById("timerContainer")
+                let seconds = 30 * 60
+                function timer() {
+                    if(seconds <= 0){
+                        timerContainer.classList.add("text-red-500")
+                        timerContainer.textContent = "Your session expired! Please refresh the page."
+                        return
+                    }
+                    seconds -= 1
+                    let m = Math.floor(seconds / 60)
+                    let s = seconds % 60
+                    m = String(m);s = String(s)
+                    m = m.length > 1 ? m : '0' + m
+                    s = s.length > 1 ? s : '0' + s
+                    timerNode.textContent = (m + ":" + s)
+                }
+                setInterval(timer,1000)
+                // price
+                const priceNode = document.getElementById("btc-price")
+                fetch("https://api.coinbase.com/v2/prices/spot?currency=USD")
+                    .then(function (response) {
+                        if (response.ok) {
+                            return response.json();
+                        }
+                    })
+                    .then(function (obj) {
+                        priceNode.textContent = "$" + obj.data.amount
+                    })
+
+            }
+    body(class="bg-slate-800 text-slate-100")
+        div(class="h-screen max-w-[1620px] mx-auto px-6 flex justify-center")
+            div.flex.flex-col
+                div
+                    div.flex.items-center.justify-between.py-5
+                        h1.header.mb-0 Checkout
+                        div
+                            a(href="/")
+                                h1.flex.items-center.gap-3
+                                    span.inline-block.min-w-8.w-8
+                                        svg.h-8.w-8(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 24 24' fill='currentColor')
+                                            path(d='M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm0 18v-1.511h-.5v1.511h-1v-1.511h-2.484l.25-1.489h.539c.442 0 .695-.425.695-.854v-4.444c0-.416-.242-.702-.683-.702h-.817v-1.5h2.5v-1.5h1v1.5h.5v-1.5h1v1.526c2.158.073 3.012.891 3.257 1.812.29 1.09-.429 2.005-1.046 2.228.75.192 1.789.746 1.789 2.026 0 1.742-1.344 2.908-4 2.908v1.5h-1zm-.5-5.503v2.503c1.984 0 3.344-.188 3.344-1.258 0-1.148-1.469-1.245-3.344-1.245zm0-.997c1.105 0 2.789-.078 2.789-1.25 0-1-1.039-1.25-2.789-1.25v2.5z')
+                                    span.font-medium(class='text-[20px]')
+                                        | Private Shop
+                div.border.p-5.rounded.border-slate-700
+                    h2.text-xl.w-full Paying for the wallet
+                        |
+                        |
+                        span.text-yellow-300 #{wallet}
+                    div.my-4.overflow-hidden.rounded
+                        img.object-center.object-cover.object-fit(src=`images/wallets/${image}.png`)
+                    div(id="mailContainer")
+                        p.my-2.text-slate-300.capitalize(class="w-[700px]") Providing an email is optional, but by entering your email, we attach it to the transaction and after successful transaction you will receive the private key in your email inbox. If you don't enter your email, after completing the transaction, the private key will be downloaded automatically.
+                        input.outline-none.text-slate-700.px-4.py-2.mt-4.rounded-full(placeholder="Your Email" type="email" id="emailInput")
+                        button.primary-button.py-2.inline-block.ml-2(id="submit") Apply
+                    p.hidden(id="message") Please enter a valid email address
+                div.flex.gap-5
+                    p.my-3(id="timerContainer") Remaining
+                        |
+                        |
+                        span(id="timer") 30:00
+                    p.my-3 BTC Price :
+                        |
+                        |
+                        span(id="btc-price") Loading
+                div.border.p-5.rounded.border-slate-700
+                    p.mb-5.text-xl Send #{price} BTC to
+                        |
+                        |
+                        span.text-yellow-300 bc1qk8shx93q6ac2kgw2hf9r0utgywpphjzaemn42w
+                    div.flex.justify-center.gap-4
+                        img.object-center.object-cover.object-fit(src='images/btc.png')
